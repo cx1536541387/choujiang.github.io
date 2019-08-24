@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url(../img/sao.jpg) no-repeat;
+    background: url(sao.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
