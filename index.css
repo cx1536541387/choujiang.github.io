@@ -54,7 +54,7 @@ li {
 .con .rotate {
     width: 500px;
     height: 500px;
-    background-color: rgba(255, 99, 72, .8);
+    background-color: rgba(255, 99, 72, 0.6);
     border-radius: 50%;
     position: absolute;
     text-align: center;
@@ -76,7 +76,7 @@ li {
 }
 
 .con .rotate:nth-of-type(odd) {
-    background-color: rgba(250, 211, 144, .7);
+    background-color: rgba(250, 211, 144, 0.6);
 }
 
 .rotate-con {
