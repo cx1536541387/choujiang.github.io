@@ -123,7 +123,7 @@ var $span = $(".rotate-bg span");
                 top: '50%',
                 opacity: 1
             });
-            $(".mask-bg").show().css('background', '#222f3e5d');
+            $(".mask-bg").show().css('background', 'rgba(34,47,62 0.3)');
         }
 
         $(".prompt .btn,.prompt i").on('click', function() {
