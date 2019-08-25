@@ -397,6 +397,26 @@ li:nth-of-type(6) {
     }
 }
 
+@media (max-width: 700px) {
+    .img-l,
+    .img-r {
+       display：none;
+    }
+    .con {
+        transform: translate(-50%, -50%) scale(0.7);
+        margin-top: 0;
+    }
+    .prompt {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+    header {
+        transform: scale(0.8);
+    }
+    li {
+        margin: 120px 16px 0 16px;
+    }
+}
+
 @media (max-width: 420px) {
     .img-l,
     .img-r {
