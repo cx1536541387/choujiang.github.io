@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var oBox = document.getElementById('box');
+            var timer = null;
+            document.ondragover = function() {
+                oBox.style.display = 'flex';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    oBox.style.display = 'none';
+                }, 200);
+            }
+
+            oBox.ondragenter = function() {
+                oBox.innerHTML = '请释放鼠标';
+            };
+            oBox.ondragleave = function() {
+                oBox.innerHTML = '请将文件拖拽到此区域';
+            };
+            oBox.ondragover = function() {
+                return false;
+            };
+            oBox.ondrop = function(ev) {
+                console.log(ev.dataTransfer.files[0]);
+                return false;
+            };
+        }, false)
+    </script>
+</head>
+
+<body>
+    <div id="box">请将文件拖拽到此区域</div>
+</body>
+
+</html>
