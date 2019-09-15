@@ -16,9 +16,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            line-height: 200px;
             display: none;
         }
     </style>
@@ -27,7 +25,7 @@
             var oBox = document.getElementById('box');
             var timer = null;
             document.ondragover = function() {
-                oBox.style.display = 'flex';
+                oBox.style.display = 'block';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     oBox.style.display = 'none';
